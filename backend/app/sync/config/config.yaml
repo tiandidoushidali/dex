@@ -1,0 +1,10 @@
+mysql:
+  host: 127.0.0.1
+  username: root
+  password: 123456
+redis:
+  host: 127.0.0.1
+  port: 6379
+  username: root
+  password: 123456
+  database: 0
