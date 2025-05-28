@@ -2,8 +2,8 @@ package service
 
 import (
 	"context"
+	"dex/app/sync/internal/service/corntask"
 	"fmt"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/sync/internal/service/corntask"
 )
 
 type Service struct {

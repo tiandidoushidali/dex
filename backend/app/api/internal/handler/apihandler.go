@@ -3,9 +3,9 @@ package handler
 import (
 	"net/http"
 
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/logic"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/svc"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/types"
+	"dex/app/api/internal/logic"
+	"dex/app/api/internal/svc"
+	"dex/app/api/internal/types"
 	"github.com/zeromicro/go-zero/rest/httpx"
 )
 

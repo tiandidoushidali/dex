@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"context"
+	_ "dex/app/sync/internal/config"
+	"dex/app/sync/internal/service"
 	"fmt"
 	"github.com/spf13/cobra"
-	_ "github.com/tiandidoushidali/dex-dodo/backend/app/sync/internal/config"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/sync/internal/service"
 	"os"
 	"os/signal"
 	"sync"

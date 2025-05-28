@@ -6,7 +6,7 @@ package handler
 import (
 	"net/http"
 
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/svc"
+	"dex/app/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/rest"
 )

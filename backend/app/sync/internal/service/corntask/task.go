@@ -1,10 +1,10 @@
 package corntask
 
 import (
+	"dex/app/sync/internal/service/corntask/etherum"
+	"dex/app/sync/internal/service/corntask/solana"
 	"fmt"
 	"github.com/robfig/cron/v3"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/sync/internal/service/corntask/etherum"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/sync/internal/service/corntask/solana"
 	"github.com/zeromicro/go-zero/core/threading"
 )
 

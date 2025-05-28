@@ -4,9 +4,9 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/config"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/handler"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/svc"
+	"dex/app/api/internal/config"
+	"dex/app/api/internal/handler"
+	"dex/app/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"

@@ -1,9 +1,9 @@
 package cmd
 
 import (
+	"dex/app/sync/internal/config"
 	"fmt"
 	"github.com/spf13/cobra"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/sync/config"
 	"log"
 )
 

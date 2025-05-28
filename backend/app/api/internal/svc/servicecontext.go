@@ -1,7 +1,7 @@
 package svc
 
 import (
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/config"
+	"dex/app/api/internal/config"
 )
 
 type ServiceContext struct {

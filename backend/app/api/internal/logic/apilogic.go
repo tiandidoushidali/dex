@@ -3,8 +3,8 @@ package logic
 import (
 	"context"
 
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/svc"
-	"github.com/tiandidoushidali/dex-dodo/backend/app/api/internal/types"
+	"dex/app/api/internal/svc"
+	"dex/app/api/internal/types"
 
 	"github.com/zeromicro/go-zero/core/logx"
 )
