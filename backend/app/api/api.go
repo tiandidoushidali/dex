@@ -1,12 +1,13 @@
 package main
 
 import (
-	"flag"
-	"fmt"
-
 	"dex/app/api/internal/config"
 	"dex/app/api/internal/handler"
 	"dex/app/api/internal/svc"
+	"flag"
+	"fmt"
+	"github.com/zeromicro/go-zero/rest/httpx"
+	"net/http"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
@@ -23,6 +24,20 @@ func main() {
 	server := rest.MustNewServer(c.RestConf)
 	defer server.Stop()
 
+	// 注册中间件
+	server.Use(func(next http.HandlerFunc) http.HandlerFunc {
+		return func(w http.ResponseWriter, r *http.Request) {
+			defer func() {
+				if err := recover(); err != nil {
+					httpx.WriteJson(w, http.StatusInternalServerError, map[string]interface{}{
+						"code":    500,
+						"message": fmt.Sprintf("%v", err),
+					})
+				}
+			}()
+			next(w, r)
+		}
+	})
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
 

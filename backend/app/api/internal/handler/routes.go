@@ -4,6 +4,7 @@
 package handler
 
 import (
+	"dex/app/api/internal/handler/auth"
 	"net/http"
 
 	"dex/app/api/internal/svc"
@@ -21,4 +22,18 @@ func RegisterHandlers(server *rest.Server, serverCtx *svc.ServiceContext) {
 			},
 		},
 	)
+	server.AddRoutes(
+		[]rest.Route{
+			{
+				Method:  http.MethodGet,
+				Path:    "/:wallet_address/nonce",
+				Handler: auth.GetNonceByAddressHandler(serverCtx),
+			},
+			{
+				Method:  http.MethodPost,
+				Path:    "/wallet/login",
+				Handler: auth.LoginByWalletAddress(serverCtx),
+			},
+		},
+		rest.WithPrefix("/api/auth"))
 }
