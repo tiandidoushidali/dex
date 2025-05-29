@@ -1,3 +1,6 @@
 [submodule "frontend"]
 	path = frontend
 	url = https://github.com/SecretCastle/dex-frontend.git
+[submodule "backend"]
+	path = backend
+	url = git@github.com:tiandidoushidali/dex-backend.git
